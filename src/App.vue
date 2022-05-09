@@ -12,7 +12,7 @@
   <ly-button type="primary"> 按钮 </ly-button>
   <ly-button type="success"> 按钮 </ly-button>
   <ly-button>按钮</ly-button>
-  <ly-button size="small"> 按钮 </ly-button>
+  <ly-button size="small" :circle="true"> 按钮 </ly-button>
 </template>
 
 <style lang="scss">

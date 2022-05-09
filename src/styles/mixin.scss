@@ -169,6 +169,10 @@ $--button-large-padding-horizontal: 25px !default;
   }
 }
 
+@mixin button-radius($border-radius) {
+  border-radius: $border-radius;
+}
+
 @mixin button-variant($color, $background-color, $border-color) {
   color: $color;
   background-color: $background-color;

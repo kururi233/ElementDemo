@@ -4,6 +4,7 @@
     :class="[
       buttonSize ? `ly-button--${buttonSize}` : '',
       type ? `ly-button--${type}` : '',
+      circle ? `ly-button--circle` : '',
     ]"
   >
     <slot />
@@ -20,10 +21,12 @@
   interface Props {
     size?: "" | "small" | "medium" | "large";
     type?: "" | "primary" | "success" | "danger";
+    circle?: boolean;
   }
   const props = withDefaults(defineProps<Props>(), {
     size: "",
     type: "",
+    circle: false,
   });
   const globalConfig = useGlobalConfig();
   const buttonSize = computed(() => {
@@ -108,6 +111,9 @@
         $--button-danger-background-color,
         $--button-danger-border-color
       );
+    }
+    @include m(circle) {
+      @include button-radius(20px);
     }
   }
 </style>
