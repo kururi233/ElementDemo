@@ -7,6 +7,12 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <ly-button type="primary">测试</ly-button>
+
+  <ly-button type="primary"> 按钮 </ly-button>
+  <ly-button type="success"> 按钮 </ly-button>
+  <ly-button>按钮</ly-button>
+  <ly-button size="small"> 按钮 </ly-button>
 </template>
 
 <style lang="scss">
