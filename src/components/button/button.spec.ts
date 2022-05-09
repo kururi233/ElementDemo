@@ -19,4 +19,13 @@ describe("ButtonTest", () => {
     });
     expect(warpper.classes()).toContain("ly-button--small");
   });
+  it("ButtonCircle", () => {
+    const circle = true;
+    const warpper = mount(Button, {
+      props: {
+        circle,
+      },
+    });
+    expect(warpper.classes()).toContain("ly-button--circle");
+  });
 });
