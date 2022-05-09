@@ -1,4 +1,6 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
+import LyContainer from "@/components/container";
 
-createApp(App).mount('#app')
+const app = createApp(App);
+app.use(LyContainer).mount("#app");
