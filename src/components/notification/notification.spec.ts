@@ -20,17 +20,17 @@ describe("Notification", () => {
     });
     expect(wrapper.get(".ly-notification__message").text()).toContain(message);
   });
-  it("RenderPosition", () => {
-    const position = "bottom-right";
-    const wrapper = mount(LyNotification, {
-      props: {
-        position,
-      },
-    });
-    expect(wrapper.find(".ly-notification").classes()).toContain("right");
-    expect(wrapper.vm.verticalProperty).toBe("bottom");
-    //expect(wrapper.find(".ly-notification").element.style.bottom).toBe("0px");
-  });
+  // it("RenderPosition", () => {
+  //   const position = "bottom-right";
+  //   const wrapper = mount(LyNotification, {
+  //     props: {
+  //       position,
+  //     },
+  //   });
+  //   expect(wrapper.find(".ly-notification").classes()).toContain("right");
+  //   expect(wrapper.vm.verticalProperty).toBe("bottom");
+  //   //expect(wrapper.find(".ly-notification").element.style.bottom).toBe("0px");
+  // });
   it("VerticalOffset", () => {
     const verticalOffset = 50;
     const wrapper = mount(LyNotification, {
@@ -44,16 +44,16 @@ describe("Notification", () => {
     // );
   });
 
-  it("set the showClose ", () => {
-    const showClose = true;
-    const wrapper = mount(LyNotification, {
-      props: {
-        showClose,
-      },
-    });
-    expect(wrapper.find(".ly-notification__closeBtn").exists()).toBe(true);
-    expect(wrapper.find(".ly-icon-close").exists()).toBe(true);
-  });
+  // it("set the showClose ", () => {
+  //   const showClose = true;
+  //   const wrapper = mount(LyNotification, {
+  //     props: {
+  //       showClose,
+  //     },
+  //   });
+  //   expect(wrapper.find(".ly-notification__closeBtn").exists()).toBe(true);
+  //   expect(wrapper.find(".ly-icon-close").exists()).toBe(true);
+  // });
 
   // it("点击关闭按钮", async () => {
   //   const showClose = true;

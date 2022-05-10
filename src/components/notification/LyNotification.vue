@@ -26,33 +26,23 @@
   };
 </script>
 <script setup lang="ts">
-  import {
-    getCurrentInstance,
-    ref,
-    computed,
-    ButtonHTMLAttributes,
-    ComponentInternalInstance,
-  } from "vue";
+  import { getCurrentInstance, ref, computed } from "vue";
   const instance = getCurrentInstance();
-  const visible = ref(true);
   interface Props {
     verticalOffset: number;
     position: string;
-    title: string;
-    message: string;
-    showClose: boolean;
+    title: { type: string; required: true };
+    message: { type: string; required: true };
+    showClose: { type: boolean; required: true };
   }
   const props = withDefaults(defineProps<Props>(), {
     verticalOffset: 0,
     position: "top-right",
-    title: "",
-    message: "",
-    showClose: true,
   });
   const verticalOffsetVal = ref(props.verticalOffset);
-  const horizontalClass = computed(() => {
-    return props.position.endsWith("right") ? "right" : "left";
-  });
+  // const horizontalClass = computed(() => {
+  //   return props.position.endsWith("right") ? "right" : "left";
+  // });
   const verticalProperty = computed(() => {
     return props.position.startsWith("top") ? "top" : "bottom";
   });
